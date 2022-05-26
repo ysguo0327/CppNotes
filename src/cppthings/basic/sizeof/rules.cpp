@@ -79,6 +79,12 @@ class H : virtual public E, virtual public F
     virtual void fun3();
 };
 
+class I {
+    char a;
+    short b;
+    short c;
+};
+
 int main(int argc, char const *argv[])
 {
     // 空类的大小为1字节
@@ -94,6 +100,7 @@ int main(int argc, char const *argv[])
     // 12
     cout << sizeof(D) << endl;
     // 派生类虚继承多个虚函数，会继承所有虚函数的vptr 8 8 16
-    cout << sizeof(E) << " " << sizeof(F) << " " << sizeof(H);
+    cout << sizeof(E) << " " << sizeof(F) << " " << sizeof(H) << endl;
+    cout << sizeof(I) << endl;
     return 0;
 }
